@@ -1,0 +1,12 @@
+# robots.txt – EP Pianos
+
+User-agent: *
+Allow: /
+
+# Empêche l’indexation du dossier Next.js ou d’éventuels fichiers internes
+Disallow: /_next/
+Disallow: /api/
+Disallow: /private/
+
+# Emplacement du sitemap
+Sitemap: https://ton-domaine.fr/sitemap.xml

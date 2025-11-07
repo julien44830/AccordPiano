@@ -7,9 +7,10 @@ import { Maitree } from "next/font/google";
 const maitree = Maitree({ subsets: ["latin"], weight: ["300", "400", "700"] });
 
 export const metadata: Metadata = {
-    title: "EP Pianos – Accord, réglage et restauration",
+    title: "EP Pianos – Accord & réglage",
     description:
         "Technicienne accordeur de pianos et clavecins. Accord, réglage, harmonisation et restauration en Loire-Atlantique et alentours.",
+    icons: { icon: [{ url: "/favicon-32x32.png", type: "image/svg+xml" }] },
 };
 
 export default function RootLayout({
