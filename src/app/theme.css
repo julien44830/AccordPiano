@@ -17,11 +17,12 @@ body {
 }
 
 a {
-    color: var(--accent);
+    /* color: var(--accent); */
     text-decoration: none;
 }
 
 a:hover {
+    color: black;
     text-decoration: underline;
 }
 

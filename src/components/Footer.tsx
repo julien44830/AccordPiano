@@ -8,7 +8,7 @@ export default function Footer() {
         >
             <div className="mx-auto max-w-6xl px-4 py-10 grid gap-4 md:grid-cols-2">
                 <div>
-                    <h2 className="text-xl font-bold text-brand-primary">
+                    <h2 className="text-xl font-bold text-(--accent)">
                         Contact
                     </h2>
                     <p className="mt-2 text-gray-700">
@@ -16,16 +16,16 @@ export default function Footer() {
                         régions sur devis.
                     </p>
                 </div>
-                <div className="flex flex-col gap-2 md:items-end">
+                <div className="flex flex-col gap-2 md:items-end text-[#694736]">
                     <Link
                         href="mailto:pianos.elisabeth@gmail.com"
-                        className="hover:text-brand-accent"
+                        className=""
                     >
                         pianos.elisabeth@gmail.com
                     </Link>
                     <Link
                         href="tel:+33649841503"
-                        className="hover:text-brand-accent"
+                        className=""
                     >
                         +33 (0)6 49 84 15 03
                     </Link>

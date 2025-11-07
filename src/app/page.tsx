@@ -5,8 +5,14 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Tarifs from "@/components/Tarifs";
 import References from "@/components/References";
-import Carousel from "@/components/Carousel";
-import Gallery from "@/components/Gallery";
+import dynamic from "next/dynamic";
+
+const Carousel = dynamic(() => import("@/components/Carousel"), {
+    ssr: false, // empêche le rendu serveur
+    loading: () => (
+        <div className="aspect-video w-full bg-gray-200 animate-pulse rounded-xl" />
+    ),
+});
 import Footer from "@/components/Footer";
 
 // Page unique avec sections + carrousel + galerie
@@ -17,10 +23,9 @@ export default function Page() {
             <Hero />
             <Services />
             <About />
+            <References />
             <Carousel />
             <Tarifs />
-            <References />
-            <Gallery />
             <Footer />
         </main>
     );

@@ -32,7 +32,7 @@ export default function Tarifs() {
                         {tarifs.map((t) => (
                             <li
                                 key={t.name}
-                                className="flex items-center justify-between px-5 py-4"
+                                className="flex items-center justify-between px-1 sm:px-3 py-4"
                             >
                                 <span className="font-medium text-zinc-100">
                                     {t.name}
