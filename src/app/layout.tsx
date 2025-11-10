@@ -8,7 +8,7 @@ const maitree = Maitree({ subsets: ["latin"], weight: ["300", "400", "700"] });
 
 // src/app/layout.tsx
 export const metadata = {
-    metadataBase: new URL("https://https://www.accordpianos-panhaleux.fr/"),
+    metadataBase: new URL("https://www.accordpianos-panhaleux.fr/"),
     title: "EP Pianos – Accord, réglage & harmonisation",
     description:
         "Technicienne accordeur diplômée. Accord, réglage, harmonisation et expertise de pianos en Loire-Atlantique et régions voisines.",
@@ -16,7 +16,7 @@ export const metadata = {
         title: "EP Pianos – Accord, réglage & harmonisation",
         description:
             "Technicienne accordeur diplômée. Accord, réglage, harmonisation et expertise de pianos.",
-        url: "https://https://www.accordpianos-panhaleux.fr/",
+        url: "https://www.accordpianos-panhaleux.fr/",
         siteName: "EP Pianos",
         images: [
             {
@@ -30,7 +30,7 @@ export const metadata = {
         type: "website",
     },
     alternates: {
-        canonical: "https://https://www.accordpianos-panhaleux.fr//",
+        canonical: "https://www.accordpianos-panhaleux.fr//",
     },
     robots: { index: true, follow: true },
 };
