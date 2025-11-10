@@ -167,8 +167,8 @@ export default function Carousel() {
                                     src={s.src}
                                     alt={s.alt}
                                     fill
-                                    width={1131}
-                                    height={635}
+                                    // width={1131}
+                                    // height={635}
                                     className="object-cover"
                                     sizes="(max-width: 635px) 100vw, (max-width: 1131px) 80vw, 900px"
                                     priority

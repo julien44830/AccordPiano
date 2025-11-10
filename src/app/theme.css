@@ -17,15 +17,19 @@ body {
 }
 
 a {
-    /* color: var(--accent); */
+    color: var(--accent);
     text-decoration: none;
 }
 
 a:hover {
-    color: black;
+    /* color: black; */
     text-decoration: underline;
 }
 
 section {
     border-color: #222;
+}
+
+.footer-a:hover {
+    color: black !important;
 }
