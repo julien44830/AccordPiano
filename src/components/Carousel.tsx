@@ -55,10 +55,10 @@ const slides = [
         src: "/images/opera-bastille-EPanhaleux.jpg",
         alt: "piano a queue sur la scene de l'opera bastille",
     },
-    {
-        src: "/images/opera-bastille-scene-EPanhaleux.jpg",
-        alt: "piano a queue sur la scene de l'opera bastillz",
-    },
+    // {
+    //     src: "/images/opera-bastille-scene-EPanhaleux.jpg",
+    //     alt: "piano a queue sur la scene de l'opera bastillz",
+    // },
     {
         src: "/images/pianofote-EPanhaleux.jpg",
         alt: "pianoforte accordage",
@@ -75,10 +75,10 @@ const slides = [
         src: "/images/sous-les-cordes-EPanhaleux.jpg",
         alt: "sous les cordes de piano",
     },
-    {
-        src: "/images/steinway-ancien-EPanhaleux.jpg",
-        alt: "ancien piano a queue Steinway restauration",
-    },
+    // {
+    //     src: "/images/steinway-ancien-EPanhaleux.jpg",
+    //     alt: "ancien piano a queue Steinway restauration",
+    // },
     {
         src: "/images/Systeme-etouffoirs-EPanhaleux.jpg",
         alt: "etouffoirs de piano",
