@@ -100,7 +100,7 @@ export default function References() {
             className="py-16 "
         >
             <div className="mx-auto max-w-6xl px-4">
-                <h2 className="text-2xl md:text-3xl font-bold text-[var(--accent)] mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-(--accent) mb-8">
                     Références
                 </h2>
 
@@ -155,7 +155,7 @@ function AutoScrollRow({
                 ref={scrollRef}
                 className="flex overflow-hidden whitespace-nowrap select-none"
             >
-                <div className="flex animate-scroll gap-2  border-b border-[var(--accent)] py-2">
+                <div className="flex animate-scroll gap-2  border-b border-(--accent) py-2">
                     {items.concat(items).map((item, i) => (
                         <span
                             key={`${item}-${i}`}

@@ -14,6 +14,11 @@ export default function Tarifs() {
         <section
             id="tarifs"
             className="py-16 bg-black text-brand-light"
+            // containIntrinsicSize donne une taille provisoire pour éviter des sauts de mise en page
+            style={{
+                contentVisibility: "auto",
+                containIntrinsicSize: "1000px",
+            }}
         >
             <div className="mx-auto max-w-6xl px-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-brand-primary">

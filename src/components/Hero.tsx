@@ -1,5 +1,4 @@
 // components/Hero.tsx
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +15,10 @@ export default function Hero() {
                 fill
                 priority
                 className="object-cover opacity-60"
+                fetchPriority="high"
+                // largeur logique pour mobiles → évite un chargement trop gros
+                sizes="100vw"
+                quality={75}
             />
             <div className="absolute inset-0 bg-black/60" />
 
