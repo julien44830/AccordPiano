@@ -98,55 +98,68 @@ export default function Header() {
                         open ? "block" : "hidden"
                     } absolute left-0 right-0 top-full`}
                 >
-                    <div className="bg-black/95 border-t border-white/10 shadow-lg">
-                        <ul className="flex flex-col py-3">
-                            <li>
-                                <Link
-                                    onClick={closeMenu}
-                                    href="#services"
-                                    className="block px-4 py-3 hover:text-brand-accent"
-                                >
-                                    Services
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    onClick={closeMenu}
-                                    href="#about"
-                                    className="block px-4 py-3 hover:text-brand-accent"
-                                >
-                                    À propos
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    onClick={closeMenu}
-                                    href="#references"
-                                    className="block px-4 py-3 hover:text-brand-accent"
-                                >
-                                    Références
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    onClick={closeMenu}
-                                    href="#tarifs"
-                                    className="block px-4 py-3 hover:text-brand-accent"
-                                >
-                                    Tarifs
-                                </Link>
-                            </li>
+                    <div
+                        // Arrière-plan semi-opaque
+                        className=" z-100  inset-0 bg-black/70  h-screen"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="modal-title"
+                        onMouseDown={(e) => {
+                            // Fermer si clic en dehors du contenu (cible = overlay)
+                            // NB : on teste que la cible directe est ce conteneur (et pas un enfant)
+                            if (e.target === e.currentTarget) closeMenu();
+                        }}
+                    >
+                        <div className="bg-black/95 shadow-lg border-b border-(--accent)">
+                            <ul className="flex flex-col py-3">
+                                <li>
+                                    <Link
+                                        onClick={closeMenu}
+                                        href="#services"
+                                        className="block px-4 py-3 hover:text-brand-accent"
+                                    >
+                                        Services
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        onClick={closeMenu}
+                                        href="#about"
+                                        className="block px-4 py-3 hover:text-brand-accent"
+                                    >
+                                        À propos
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        onClick={closeMenu}
+                                        href="#references"
+                                        className="block px-4 py-3 hover:text-brand-accent"
+                                    >
+                                        Références
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        onClick={closeMenu}
+                                        href="#tarifs"
+                                        className="block px-4 py-3 hover:text-brand-accent"
+                                    >
+                                        Tarifs
+                                    </Link>
+                                </li>
 
-                            <li className="px-4 pt-2">
-                                <Link
-                                    onClick={closeMenu}
-                                    href="#contact"
-                                    className="inline-flex w-full items-center  rounded-full bg-brand-primary  text-white hover:opacity-90"
-                                >
-                                    Contact
-                                </Link>
-                            </li>
-                        </ul>
+                                <li className="px-4 pt-2">
+                                    <Link
+                                        onClick={closeMenu}
+                                        href="#contact"
+                                        className="inline-flex w-full items-center  rounded-full bg-brand-primary  text-white hover:opacity-90"
+                                    >
+                                        Contact
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
