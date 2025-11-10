@@ -30,7 +30,7 @@ export const metadata = {
         type: "website",
     },
     alternates: {
-        canonical: "https://www.accordpianos-panhaleux.fr//",
+        canonical: "https://www.accordpianos-panhaleux.fr/",
     },
     robots: { index: true, follow: true },
 };

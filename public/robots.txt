@@ -9,4 +9,4 @@ Disallow: /api/
 Disallow: /private/
 
 # Emplacement du sitemap
-Sitemap: https://ton-domaine.fr/sitemap.xml
+Sitemap: https://www.accordpianos-panhaleux.fr/sitemap.xml
