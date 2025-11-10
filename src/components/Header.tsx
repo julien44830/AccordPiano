@@ -19,7 +19,7 @@ export default function Header() {
                 >
                     {/* Remplacer par <Image> si besoin */}
                     <img
-                        src="/favicon.png"
+                        src="/favicon-72x72.png"
                         alt="Logo EP Pianos"
                         className="h-10 w-10 md:h-12 md:w-12"
                     />

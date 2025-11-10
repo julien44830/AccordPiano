@@ -16,16 +16,16 @@ export default function Footer() {
                         régions sur devis.
                     </p>
                 </div>
-                <div className="flex flex-col gap-2 md:items-end text-[#694736]">
+                <div className="flex flex-col gap-2 md:items-end text-[#694736] ">
                     <Link
                         href="mailto:pianos.elisabeth@gmail.com"
-                        className=""
+                        className="footer-a"
                     >
                         pianos.elisabeth@gmail.com
                     </Link>
                     <Link
                         href="tel:+33649841503"
-                        className=""
+                        className="footer-a"
                     >
                         +33 (0)6 49 84 15 03
                     </Link>
