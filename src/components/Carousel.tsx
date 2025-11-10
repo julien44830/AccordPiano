@@ -3,85 +3,84 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { text } from "stream/consumers";
 
 // --- Données ---
 const slides = [
     {
         src: "/images/accord-EPanhaleux.jpg",
         alt: "accordage de piano droit",
+        text: "Accord piano droit",
     },
     {
         src: "/images/accord-Pleyel-EPanhaleux.jpg",
         alt: "accordage de piano droit",
+        text: "Accord piano droit",
     },
     {
         src: "/images/concert-versailles-EPanhaleux.jpg",
         alt: "piano a queue dans une salle de concert",
+        text: "Service concert",
     },
     {
         src: "/images/expertise-EPanhaleuxx.jpg",
         alt: "expertise de piano ancien",
+        text: "Expertise",
     },
     {
         src: "/images/harmonisation-EPanhaleux.jpg",
-        alt: "armonisation de piano",
+        alt: "harmonisation de piano",
+        text: "Harmonisation",
     },
     {
         src: "/images/harpsichord-EPanhaleux.jpg",
         alt: "harpsichord restauration",
+        text: "Clavecin",
     },
     {
         src: "/images/EPanhaleux-1.jpg",
         alt: "Elisabeth Panhaleux accordeuse de piano",
+        text: "Elisabeth Panhaleux technicienne pianos",
     },
     {
         src: "/images/EPanhaleux-2.jpg",
         alt: "Elisabeth Panhaleux restauration de piano",
+        text: "Elisabeth Panhaleux technicienne pianos",
     },
-
-    // {
-    //     src: "/images/EPanhaleux-3.jpg",
-    //     alt: "Cordes de piano et feutres rouges",
-    // },
-    // {
-    //     src: "/images/EPanhaleux-4.jpg",
-    //     alt: "Cordes de piano et feutres rouges",
-    // },
     {
         src: "/images/EPanhaleux-5.jpg",
         alt: "Elisabeth Panhaleux expertise de piano",
+        text: "Elisabeth Panhaleux technicienne pianos",
     },
     {
         src: "/images/opera-bastille-EPanhaleux.jpg",
         alt: "piano a queue sur la scene de l'opera bastille",
+        text: "Opéra Bastille, salle de répétition",
     },
-    // {
-    //     src: "/images/opera-bastille-scene-EPanhaleux.jpg",
-    //     alt: "piano a queue sur la scene de l'opera bastillz",
-    // },
     {
         src: "/images/pianofote-EPanhaleux.jpg",
         alt: "pianoforte accordage",
+        text: "Accord pianoforte",
     },
     {
         src: "/images/prepa-concert-chine-EPanhaleux.jpg",
         alt: "preparation de concert en chine",
+        text: "Préparation piano de concert",
     },
     {
         src: "/images/reparation-cadre-piano-EPanhaleux.jpg",
         alt: "reparation cadre de piano",
+        text: "Cadre piano droit",
     },
     {
         src: "/images/sous-les-cordes-EPanhaleux.jpg",
         alt: "sous les cordes de piano",
+        text: "Sous les cordes, pianos à queue",
     },
-    // {
-    //     src: "/images/steinway-ancien-EPanhaleux.jpg",
-    //     alt: "ancien piano a queue Steinway restauration",
-    // },
     {
         src: "/images/Systeme-etouffoirs-EPanhaleux.jpg",
         alt: "etouffoirs de piano",
+        text: "Système d'étouffoirs pianos à queue",
     },
 ];
 
@@ -156,7 +155,7 @@ export default function Carousel() {
                             >
                                 {" "}
                                 <p className="text-(--accent) z-5000 absolute text-center w-full  bg-black/80 py-1 text-sm md:text-base lg:text-lg font-semibold">
-                                    {s.alt}
+                                    {s.text}
                                 </p>
                                 {/* 
                   Image :
@@ -167,8 +166,6 @@ export default function Carousel() {
                                     src={s.src}
                                     alt={s.alt}
                                     fill
-                                    // width={1131}
-                                    // height={635}
                                     className="object-cover"
                                     sizes="(max-width: 635px) 100vw, (max-width: 1131px) 80vw, 900px"
                                     priority

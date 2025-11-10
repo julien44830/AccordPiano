@@ -10,6 +10,7 @@ const maitree = Maitree({ subsets: ["latin"], weight: ["300", "400", "700"] });
 export const metadata = {
     metadataBase: new URL("https://www.accordpianos-panhaleux.fr/"),
     title: "EP Pianos – Accord, réglage & harmonisation",
+    icons: { icon: [{ url: "/favicon-32x32.png", type: "image/svg+xml" }] },
     description:
         "Technicienne accordeur diplômée. Accord, réglage, harmonisation et expertise de pianos en Loire-Atlantique et régions voisines.",
     openGraph: {
