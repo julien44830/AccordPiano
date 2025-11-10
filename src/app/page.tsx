@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Tarifs from "@/components/Tarifs";
 import References from "@/components/References";
-import Carousel from "@/components/Carousel";
+import CarouselLazy from "@/components/Carousel.lazy";
 import Footer from "@/components/Footer";
 
 // Page unique avec sections + carrousel + galerie
@@ -17,7 +17,7 @@ export default function Page() {
             <Services />
             <About />
             <References />
-            <Carousel />
+            <CarouselLazy />
             <Tarifs />
             <Footer />
         </main>
