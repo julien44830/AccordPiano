@@ -3,7 +3,7 @@
 import React, { useMemo, useRef, useState } from "react";
 
 /* -----------------------------------------------------------
-   🎹 Piano (Next.js + Tailwind)
+   🎹 Piano (Next.js + Tailwind, responsive)
    - Activation audio (overlay)
    - Mode "piano désaccordé"
    ----------------------------------------------------------- */
@@ -52,23 +52,18 @@ type BlackKey = {
     between: number;
 };
 
+const WHITE_KEY_COUNT = 7;
+
 export default function Piano() {
     // 🔒 Activation audio (imposée par les navigateurs)
     const [audioReady, setAudioReady] = useState(false);
     const audioCtxRef = useRef<AudioContext | null>(null);
-    console.log("%c⧭", "color: #00a3cc", audioCtxRef);
 
     // 🎛️ État "piano désaccordé"
     const [detuned, setDetuned] = useState(false);
 
     // 🧭 Table de désaccordage par touche (conservée tant que la page reste ouverte)
-    // Exemple: { "C4": +12.3, "C#4": -27.8, ... } en cents
     const detuneCentsRef = useRef<Record<string, number>>({});
-
-    // ⚙️ Paramètres d'UI
-    const WHITE_KEY_WIDTH = 64;
-    const WHITE_KEY_COUNT = 7;
-    const pianoWidth = WHITE_KEY_WIDTH * WHITE_KEY_COUNT;
 
     // 🎹 Notes d’une octave
     const whiteNotes = useMemo<string[]>(
@@ -90,11 +85,9 @@ export default function Piano() {
 
     // ▶️ Initialise et "débloque" l'audio au premier clic/tap
     function initAudio(): void {
-        // ✅ Protection SSR : on vérifie qu'on est bien côté client
         if (typeof window === "undefined") return;
 
         if (!audioCtxRef.current) {
-            // ⚠️ Gestion de webkitAudioContext pour certains navigateurs (Safari)
             const AudioCtx =
                 (window as any).AudioContext ||
                 (window as any).webkitAudioContext;
@@ -114,7 +107,6 @@ export default function Piano() {
         setDetuned(checked);
 
         if (checked) {
-            // Génère (une seule fois par touche manquante) un offset en cents dans [-35, +35]
             const ensureDetuneFor = (note: string) => {
                 if (detuneCentsRef.current[note] == null) {
                     const cents = Math.random() * 70 - 35; // [-35, +35]
@@ -135,21 +127,17 @@ export default function Piano() {
         const now = ctx.currentTime;
         const duration = 0.4;
 
-        // Fréquence de base
         let freq = noteToFreq(note);
 
-        // Applique le désaccordage si activé
         if (detuned) {
             const cents = detuneCentsRef.current[note] ?? 0;
             freq = detuneFreq(freq, cents);
         }
 
-        // Oscillateur
         const osc = ctx.createOscillator();
         osc.type = "sine";
         osc.frequency.value = freq;
 
-        // Gain + enveloppe
         const gain = ctx.createGain();
         const attack = 0.01;
         const decay = 0.15;
@@ -167,7 +155,6 @@ export default function Piano() {
         osc.start(now);
         osc.stop(now + duration + release + 0.01);
 
-        // Nettoyage
         osc.onended = () => {
             try {
                 osc.disconnect();
@@ -179,20 +166,15 @@ export default function Piano() {
     }
 
     return (
-        <div
-            className="my-6 mx-auto "
-            style={{ width: pianoWidth }}
-        >
+        <div className="mx-auto my-6 w-full max-w-[448px]">
             {/* Barre d'options */}
             <div className="mb-2 flex items-center gap-3">
-                <label className="inline-flex items-center gap-2 text-sm text-gray-800">
+                <label className="inline-flex items-center gap-2 text-sm text-gray-100">
                     <input
                         type="checkbox"
                         checked={detuned}
                         onChange={toggleDetuned}
-                        disabled={
-                            !audioReady
-                        } /* on ne coche qu'après activation audio */
+                        disabled={!audioReady}
                         className="h-4 w-4 cursor-pointer disabled:cursor-not-allowed"
                     />
                     <span>Piano désaccordé</span>
@@ -200,10 +182,7 @@ export default function Piano() {
             </div>
 
             {/* Piano + overlay d'activation */}
-            <div
-                className="piano-container h-[220px]"
-                style={{ width: pianoWidth }}
-            >
+            <div className="piano-container h-[180px] md:h-[220px]">
                 {!audioReady && (
                     <button
                         className="audio-overlay z-30 flex flex-col items-center justify-center rounded-lg bg-white/75 text-lg leading-tight text-gray-800 transition hover:bg-white/90"
@@ -223,7 +202,7 @@ export default function Piano() {
                 )}
 
                 {/* touches blanches */}
-                <div className="relative z-1 flex">
+                <div className="relative z-[1] flex h-full">
                     {whiteNotes.map((note) => {
                         const cents = detuneCentsRef.current[note];
                         const title =
@@ -234,15 +213,14 @@ export default function Piano() {
                         return (
                             <button
                                 key={note}
-                                className="key-white relative flex items-end justify-center border border-gray-300 text-gray-600 shadow-inner transition hover:brightness-95 focus:outline-none disabled:cursor-not-allowed"
-                                style={{ width: WHITE_KEY_WIDTH, height: 220 }}
-                                onMouseEnter={() => playNote(note)} // 🎵 jouer au survol
-                                onTouchStart={() => playNote(note)} // 👍 support mobile
+                                className="key-white relative flex flex-1 items-end justify-center border border-gray-300 text-gray-600 shadow-inner transition hover:brightness-95 focus:outline-none disabled:cursor-not-allowed"
+                                onMouseEnter={() => playNote(note)}
+                                onTouchStart={() => playNote(note)}
                                 aria-label={`Jouer ${note}`}
                                 disabled={!audioReady}
                                 title={title}
                             >
-                                <span className="key-white-label text-xs font-mono text-gray-500">
+                                <span className="key-white-label text-xs font-mono text-gray-500 md:text-sm">
                                     {note.replace("4", "")}
                                 </span>
                             </button>
@@ -258,12 +236,15 @@ export default function Piano() {
                             ? `${name} (${cents.toFixed(1)} cents)`
                             : name;
 
+                    // 🌐 position en pourcentage de la largeur du piano
+                    const leftPercent = ((between + 1) / WHITE_KEY_COUNT) * 100;
+
                     return (
                         <button
                             key={name}
-                            className="key-black z-20 absolute top-0 h-[140px] w-9 border border-black/80 transition-transform duration-75 hover:translate-y-px hover:brightness-110 disabled:cursor-not-allowed"
+                            className="key-black absolute top-0 h-[120px] w-9 border border-black/80 transition-transform duration-75 hover:translate-y-px hover:brightness-110 disabled:cursor-not-allowed md:h-[140px] z-20"
                             style={{
-                                left: (between + 1) * WHITE_KEY_WIDTH - 18,
+                                left: `calc(${leftPercent}% - 18px)`,
                             }}
                             onMouseEnter={() => playNote(name)}
                             onTouchStart={() => playNote(name)}
