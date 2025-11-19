@@ -179,58 +179,37 @@ export default function Header() {
             {/* 🎹 Modale du piano */}
             {isPianoOpen && (
                 <div
-                    className="fixed inset-0 z-999 flex items-center justify-center bg-black/70"
+                    className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70"
                     role="dialog"
                     aria-modal="true"
                     aria-label="Piano interactif"
                     onMouseDown={(e) => {
-                        // fermer en cliquant sur l’overlay
                         if (e.target === e.currentTarget) closePiano();
                     }}
                 >
+                    {/* contenu de la modale */}
                     <div
-                        className="relative max-w-4xl  border border-(--accent) rounded-xl bg-neutral-900/95 p-4 shadow-2xl"
-                        onMouseDown={(e) => e.stopPropagation()} // empêcher la fermeture en cliquant dans le contenu
+                        className="relative w-full max-w-[80vw] md:max-w-xl border border-(--accent) rounded-xl 
+                                bg-neutral-900/95 p-4 shadow-2xl"
+                        onMouseDown={(e) => e.stopPropagation()}
                     >
-                        {/* bouton de fermeture */}
-                        {/* <button
-                            type="button"
-                            onClick={closePiano}
-                            className="absolute right-3 top-3 rounded-full px-2 text-xl text-gray-300 hover:text-white"
-                            aria-label="Fermer le piano"
-                        >
-                            ✕
-                        </button> */}
-
-                        {/* Bouton fermer en haut à droite */}
+                        {/* bouton fermer */}
                         <button
                             type="button"
                             aria-label="Fermer le piano"
                             onClick={closePiano}
-                            className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--accent) text-(--bg)) hover:bg-- focus:outline-none hover:cursor-pointer hover:text-(--accent) hover:border-white"
+                            className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center 
+                                    rounded-full border border-gray-400/40 hover:bg-white/10 text-white"
                         >
-                            {/* Icône croix (SVG minimal) */}
-                            <svg
-                                viewBox="0 0 20 20"
-                                aria-hidden="true"
-                                className="h-4 w-4"
-                                focusable="false"
-                            >
-                                <path
-                                    d="M4.5 4.5l11 11m0-11l-11 11"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                />
-                            </svg>
+                            ✕
                         </button>
 
-                        {/* titre optionnel */}
+                        {/* Titre */}
                         <h2 className="mb-3 pr-8 text-lg font-semibold text-white">
                             Piano virtuel
                         </h2>
 
-                        {/* ton composant Piano */}
+                        {/* Ton piano */}
                         <Piano />
                     </div>
                 </div>

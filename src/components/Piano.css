@@ -37,12 +37,12 @@
 /* Responsive : on ajuste juste la taille des touches */
 @media (max-width: 520px) {
     .key-white {
-        width: 44px;
+        width: 44px !important;
         height: 180px;
     }
 
     .key-black {
-        width: 28px;
+        width: 28px !important ;
         height: 110px;
     }
 }
