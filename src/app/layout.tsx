@@ -1,12 +1,12 @@
 // app/layout.tsx
-import type { Metadata } from "next";
 import "./globals.css"; // ⚠️ contient @import "tailwindcss";
 import "./theme.css"; // ton thème sombre
+import "../components/Piano.css";
 import { Maitree } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const maitree = Maitree({ subsets: ["latin"], weight: ["300", "400", "700"] });
-
-// src/app/layout.tsx
 export const metadata = {
     metadataBase: new URL("https://www.accordpianos-panhaleux.fr/"),
     title: "EP Pianos – Accord, réglage & harmonisation",
@@ -47,7 +47,9 @@ export default function RootLayout({
             className={maitree.className}
         >
             <body className="bg-brand-dark text-brand-light antialiased">
+                <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );

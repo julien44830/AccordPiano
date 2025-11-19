@@ -7,6 +7,7 @@ export default function Footer() {
             className="border-t bg-white"
         >
             <div className="mx-auto max-w-6xl px-4 py-10 grid gap-4 md:grid-cols-2">
+                {/* Bloc Contact */}
                 <div>
                     <h2 className="text-xl font-bold text-(--accent)">
                         Contact
@@ -16,6 +17,8 @@ export default function Footer() {
                         régions sur devis.
                     </p>
                 </div>
+
+                {/* Bloc coordonnées */}
                 <div className="flex flex-col gap-2 md:items-end text-[#694736] ">
                     <Link
                         href="mailto:pianos.elisabeth@gmail.com"
@@ -31,8 +34,21 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
+
+            {/* Bas de page */}
             <div className="py-4 text-center text-xs text-gray-500">
-                © {new Date().getFullYear()} EP Pianos
+                <Link
+                    href="/mentionlegale"
+                    className="hover:underline mr-1"
+                >
+                    Mentions légales
+                </Link>
+                © {new Date().getFullYear()} Elisabeth Panhaleux Pianos. Tous
+                droits réservés.
+                <br />
+                <span className="text-gray-400">
+                    Site conçu et développé par Julien — Développeur Web
+                </span>{" "}
             </div>
         </footer>
     );

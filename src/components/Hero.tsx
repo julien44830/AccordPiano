@@ -26,8 +26,9 @@ export default function Hero() {
                 <div className="max-w-2xl">
                     {/* --- Titre animé --- */}
                     <h1 className="animate-popIn text-4xl md:text-5xl font-bold text-brand-light leading-tight">
-                        Technicienne pianos – Accord, réglage, harmonisation &
-                        expertise
+                        Technicienne pianos
+                        <br />
+                        Accord, réglage, harmonisation & expertise
                     </h1>
 
                     {/* --- Sous-titre --- */}

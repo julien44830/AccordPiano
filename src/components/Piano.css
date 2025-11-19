@@ -1,0 +1,48 @@
+/* Conteneur principal du piano */
+.piano-container {
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Overlay plein dessus tant que l’audio n’est pas activé */
+.audio-overlay {
+    position: absolute;
+    inset: 0; /* top/right/bottom/left: 0 */
+    backdrop-filter: blur(2px);
+    border: 2px dashed #888;
+}
+
+/* Touche blanche : uniquement ce que Tailwind ne gère pas bien */
+.key-white {
+    background: linear-gradient(#fff, #f2f2f2);
+    border-bottom: 4px solid #ccc;
+}
+
+/* Label de note sur les touches blanches */
+.key-white-label {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+}
+
+/* Touche noire : gradient, radius et ombre custom */
+.key-black {
+    background: linear-gradient(#222, #000);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive : on ajuste juste la taille des touches */
+@media (max-width: 520px) {
+    .key-white {
+        width: 44px;
+        height: 180px;
+    }
+
+    .key-black {
+        width: 28px;
+        height: 110px;
+    }
+}

@@ -113,7 +113,6 @@ function Modal({
             }
         };
     }, [isOpen, onClose]);
-    console.log("%c⧭", "color: #00e600", isOpen);
 
     if (!isOpen) return null;
 
