@@ -264,7 +264,7 @@ export default function Carousel() {
                                 key={i}
                                 aria-label={`Aller à la diapo ${i + 1}`}
                                 onClick={() => setIdx(i)}
-                                className={`h-2.5 w-2.5 rounded-full transition ${
+                                className={`h-2.5 w-2.5 rounded-full transition hover:cursor-pointer ${
                                     i === idx
                                         ? "bg-(--accent) scale-125"
                                         : "bg-white/50 hover:bg-white/80 hover:scale-125"
