@@ -91,6 +91,7 @@ export default function MentionLegale() {
                     Site web :{" "}
                     <a
                         href={hostInfo.website}
+                        target="_blank"
                         className="text-brand-accent hover:underline"
                     >
                         {hostInfo.website}
