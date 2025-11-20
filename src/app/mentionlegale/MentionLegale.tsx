@@ -1,15 +1,14 @@
 // Objet de configuration pour toutes les informations susceptibles de changer
-// ⚠️ À adapter avec les vraies informations de l'entreprise
 const legalInfo = {
     siteUrl: "https://www.accordpianos-panhaleux.fr", // URL complète du site
     domain: "www.accordpianos-panhaleux.fr", // Nom de domaine (sans https)
     companyName: "Elisabeth Panhaleux Pianos", // Nom commercial
     legalForm: "entreprise individuelle", // Forme juridique
-    siret: "444 328 967 00021", // ⚠️ Remplacer par le vrai SIRET
-    addressLine1: "12 Rue des Lilas",
-    addressLine2: "44000 Nantes",
+    siret: "444 328 967 00021",
+    addressLine1: "22 rue de la salmoniere",
+    addressLine2: "44450 saint julien de Concelles",
     phone: "+33 (0)6 49 84 15 03",
-    email: "pianoselisabeth@gmail.com", // ⚠️ Remplacer par le vrai email
+    email: "pianoselisabeth@gmail.com",
     directorName: "Elisabeth Panhaleux", // Directeur de la publication
     cityCourts: "Nantes", // Ville du tribunal compétent
 };
@@ -17,8 +16,8 @@ const legalInfo = {
 // Informations sur l'hébergeur (moins susceptibles de changer mais centralisées aussi)
 const hostInfo = {
     name: "Vercel Inc.",
-    addressLine1: "340 S Lemon Ave #4133",
-    addressLine2: "Walnut, CA 91789, USA",
+    addressLine1: "650 California St",
+    addressLine2: "San Francisco, CA 94108, US",
     website: "https://vercel.com",
 };
 

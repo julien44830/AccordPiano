@@ -41,9 +41,9 @@ export default function About() {
                         <strong>écoles de musique</strong>.
                     </p>
                     <p>
-                        En 2016 eu la chance de rejoindre la nouvelle équipe des{" "}
-                        <strong>pianos Pleyel</strong>, qui a lancé une
-                        véritable aventure de renouveau de cette marque,
+                        En 2016 j'ai eu la chance de rejoindre la nouvelle
+                        équipe des <strong>pianos Pleyel</strong>, qui a lancé
+                        une véritable aventure de renouveau de cette marque,
                         emblématique et représentative du{" "}
                         <strong>Savoir-Faire</strong> à la française.
                     </p>
