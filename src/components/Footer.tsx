@@ -6,7 +6,19 @@ export default function Footer() {
             id="contact"
             className="border-t bg-white"
         >
-            <div className="mx-auto max-w-6xl px-4 py-10 grid gap-4 md:grid-cols-2">
+            <div className="mx-auto max-w-6xl px-4 py-10 grid gap-4 md:grid-cols-2 relative">
+                <a
+                    className="absolute right-5 top-38 md:top-35"
+                    href="https://www.artisanat.fr/metiers/labels-qualifications/qualite-artisan"
+                    target="blanc"
+                >
+                    <img
+                        className="w-16 h-auto"
+                        src="/artisan-dart.png"
+                        alt="logo des artisans d'art"
+                    />{" "}
+                </a>
+
                 {/* Bloc Contact */}
                 <div>
                     <h2 className="text-xl font-bold text-(--accent)">
