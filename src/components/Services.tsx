@@ -146,7 +146,7 @@ function Modal({
                     type="button"
                     aria-label="Fermer la fenêtre"
                     onClick={onClose}
-                    className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--accent) text-(--bg)) hover:bg-- focus:outline-none focus:ring-2 "
+                    className="hover:cursor-pointer hover:rotate-90 hover:text-(--accent) transition-all absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--accent) text-(--bg)) hover:bg-- focus:outline-none focus:ring-2 "
                 >
                     {/* Icône croix (SVG minimal) */}
                     <svg
