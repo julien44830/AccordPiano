@@ -52,6 +52,17 @@ export default function Hero() {
                             +33 (0)6 49 84 15 03
                         </Link>
                     </div>
+                    <a
+                        className="absolute right-10 md:right-10 bottom-20 md:tbottom-38 animate-fadeIn"
+                        href="https://www.artisanat.fr/metiers/labels-qualifications/qualite-artisan"
+                        target="blanc"
+                    >
+                        <img
+                            className="w-20  md:w-46 h-auto"
+                            src="/artisan-dart.png"
+                            alt="logo des artisans d'art"
+                        />{" "}
+                    </a>
                 </div>
             </div>
         </section>
