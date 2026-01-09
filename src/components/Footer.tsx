@@ -25,8 +25,9 @@ export default function Footer() {
                         Contact
                     </h2>
                     <p className="mt-2 text-gray-700">
-                        Loire-Atlantique et départements limitrophes — autres
-                        régions sur devis.
+                        Basé près de Nantes, j’interviens en Loire-Atlantique
+                        (Nantes, Saint-Herblain, Rezé, Orvault) et dans les
+                        départements limitrophes. Autres régions sur devis.
                     </p>
                 </div>
 
