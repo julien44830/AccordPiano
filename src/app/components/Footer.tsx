@@ -8,7 +8,7 @@ export default function Footer() {
         >
             <div className="mx-auto max-w-6xl px-4 py-10 grid gap-4 md:grid-cols-2 relative">
                 <a
-                    className="absolute right-5 top-60 md:top-40"
+                    className="absolute right-5 top-60 md:top-40 link"
                     href="https://www.artisanat.fr/metiers/labels-qualifications/qualite-artisan"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -40,13 +40,13 @@ export default function Footer() {
                 <div className="flex flex-col gap-2 md:items-end text-[#694736] ">
                     <a
                         href="mailto:pianos.elisabeth@gmail.com"
-                        className="footer-a"
+                        className="link"
                     >
                         pianos.elisabeth@gmail.com
                     </a>
                     <a
                         href="tel:+33649841503"
-                        className="footer-a"
+                        className="link"
                     >
                         +33 (0)6 49 84 15 03
                     </a>
@@ -54,7 +54,7 @@ export default function Footer() {
                     <div className="flex gap-4 mt-2">
                         <a
                             href="https://www.instagram.com/elisabethpanhaleuxpianos/"
-                            className="footer-a top"
+                            className="link"
                             target="_blank"
                             aria-label="Instagram"
                             rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export default function Footer() {
                         </a>
                         <a
                             href="https://www.facebook.com/Elisabethpanhaleuxpianos"
-                            className="footer-a"
+                            className="link"
                             target="_blank"
                             aria-label="facebook"
                             rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function Footer() {
             <div className="py-4 text-center text-xs text-gray-500">
                 <Link
                     href="/mentionlegale"
-                    className="hover:underline mr-1"
+                    className="hover:underline mr-1 link"
                 >
                     Mentions légales
                 </Link>

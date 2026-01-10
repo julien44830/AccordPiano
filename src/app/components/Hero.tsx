@@ -41,19 +41,19 @@ export default function Hero() {
                     <div className="mt-6 flex flex-wrap gap-3 animate-fadeIn ">
                         <Link
                             href="mailto:pianos.elisabeth@gmail.com"
-                            className="rounded-full bg-brand-primary px-5 py-3 text-white hover:opacity-90 transition"
+                            className="rounded-full bg-brand-primary px-5 py-3 text-white hover:opacity-90 transition link"
                         >
                             pianos.elisabeth@gmail.com
                         </Link>
                         <Link
                             href="tel:+33649841503"
-                            className="rounded-full border border-brand-primary px-5 py-3 text-brand-primary hover:bg-brand-primary hover:text-white transition"
+                            className="rounded-full border border-brand-primary px-5 py-3 text-brand-primary hover:bg-brand-primary hover:text-white transition link"
                         >
                             +33 (0)6 49 84 15 03
                         </Link>
                     </div>
                     <a
-                        className="absolute right-10 md:right-10 bottom-20 md:tbottom-38 animate-fadeIn"
+                        className="absolute right-10 md:right-10 bottom-20 md:tbottom-38 animate-fadeIn link"
                         href="https://www.artisanat.fr/metiers/labels-qualifications/qualite-artisan"
                         target="blanc"
                     >
