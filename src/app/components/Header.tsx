@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Piano from "./Pianos"; // adapte le chemin si besoin
+import Piano from "./Pianos";
 
 export default function Header() {
     const [open, setOpen] = useState(false); // menu mobile
@@ -28,7 +28,6 @@ export default function Header() {
                             className="flex items-center gap-3 focus:outline-none hover:cursor-pointer "
                             aria-label="Ouvrir le piano"
                         >
-                            {/* Remplacer par <Image> si besoin */}
                             <img
                                 src="/favicon-72x72.png"
                                 alt="Logo EP Pianos"
@@ -37,17 +36,9 @@ export default function Header() {
                         </button>
                         <Link
                             href="/"
-                            className="leading-tight text-brand-accent hover:cursor-pointer"
+                            className="leading-tight text-brand-accent hover:cursor-pointer link text-sm md:text-base text-brand-primary font-semibold"
                         >
-                            <span className="inline-block text-sm md:text-base text-accent font-semibold">
-                                ELISABETH{" "}
-                            </span>{" "}
-                            <span className="inline-block text-sm md:text-base text-brand-primary font-semibold">
-                                PANHALEUX{" "}
-                            </span>{" "}
-                            <span className="inline-block text-sm md:text-base text-brand-primary font-semibold">
-                                Pianos
-                            </span>
+                            ELISABETH PANHALEUX Pianos
                         </Link>
                     </div>
 
@@ -67,7 +58,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#services"
-                                    className="hover:text-brand-accent"
+                                    className="hover:text-brand-accent link"
                                 >
                                     Services
                                 </Link>
@@ -75,7 +66,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#about"
-                                    className="hover:text-brand-accent"
+                                    className="hover:text-brand-accent link"
                                 >
                                     À propos
                                 </Link>
@@ -83,7 +74,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#references"
-                                    className="hover:text-brand-accent"
+                                    className="hover:text-brand-accent link"
                                 >
                                     Références
                                 </Link>
@@ -91,7 +82,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#tarifs"
-                                    className="hover:text-brand-accent"
+                                    className="hover:text-brand-accent link"
                                 >
                                     Tarifs
                                 </Link>
@@ -99,7 +90,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#contact"
-                                    className="inline-flex items-center rounded-full bg-brand-primary px-4 py-2 text-white hover:opacity-90"
+                                    className="inline-flex items-center rounded-full bg-brand-primary px-4 py-2 text-white hover:opacity-90 link"
                                 >
                                     Contact
                                 </Link>
@@ -127,7 +118,7 @@ export default function Header() {
                                         <Link
                                             onClick={closeMenu}
                                             href="#services"
-                                            className="block px-4 py-3 hover:text-brand-accent"
+                                            className="block px-4 py-3 hover:text-brand-accent link"
                                         >
                                             Services
                                         </Link>
@@ -136,7 +127,7 @@ export default function Header() {
                                         <Link
                                             onClick={closeMenu}
                                             href="#about"
-                                            className="block px-4 py-3 hover:text-brand-accent"
+                                            className="block px-4 py-3 hover:text-brand-accent link"
                                         >
                                             À propos
                                         </Link>
@@ -145,7 +136,7 @@ export default function Header() {
                                         <Link
                                             onClick={closeMenu}
                                             href="#references"
-                                            className="block px-4 py-3 hover:text-brand-accent"
+                                            className="block px-4 py-3 hover:text-brand-accent link"
                                         >
                                             Références
                                         </Link>
@@ -154,7 +145,7 @@ export default function Header() {
                                         <Link
                                             onClick={closeMenu}
                                             href="#tarifs"
-                                            className="block px-4 py-3 hover:text-brand-accent"
+                                            className="block px-4 py-3 hover:text-brand-accent link"
                                         >
                                             Tarifs
                                         </Link>
@@ -164,7 +155,7 @@ export default function Header() {
                                         <Link
                                             onClick={closeMenu}
                                             href="#contact"
-                                            className="inline-flex w-full items-center rounded-full bg-brand-primary text-white hover:opacity-90"
+                                            className="inline-flex w-full items-center rounded-full bg-brand-primary text-white hover:opacity-90 link"
                                         >
                                             Contact
                                         </Link>
@@ -179,7 +170,7 @@ export default function Header() {
             {/* 🎹 Modale du piano */}
             {isPianoOpen && (
                 <div
-                    className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70"
+                    className="fixed inset-0 z-999 flex items-center justify-center bg-black/70"
                     role="dialog"
                     aria-modal="true"
                     aria-label="Piano interactif"

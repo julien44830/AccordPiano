@@ -1,10 +1,10 @@
 // app/page.tsx
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
-import Tarifs from "@/components/Tarifs";
-import References from "@/components/References";
-import CarouselLazy from "@/components/Carousel.lazy";
+import Hero from "@/app/components/Hero";
+import Services from "@/app/components/Services";
+import About from "@/app/components/About";
+import Tarifs from "@/app/components/Tarifs";
+import References from "@/app/components/References";
+import CarouselLazy from "@/app/components/Carousel.lazy";
 
 import type { Metadata } from "next";
 

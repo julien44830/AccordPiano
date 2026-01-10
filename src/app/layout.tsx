@@ -1,10 +1,8 @@
 // app/layout.tsx
-import "./globals.css"; // ⚠️ contient @import "tailwindcss";
-import "./theme.css"; // ton thème sombre
-import "../components/Piano.css";
+import "./(site)/globals.css"; // ⚠️ contient @import "tailwindcss";
+import "./(site)/theme.css"; // ton thème sombre
+import "./components/Piano.css";
 import { Maitree } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const maitree = Maitree({ subsets: ["latin"], weight: ["300", "400", "700"] });
 export const metadata = {
@@ -41,9 +39,7 @@ export default function RootLayout({
             className={maitree.className}
         >
             <body className="bg-brand-dark text-brand-light antialiased">
-                <Header />
                 {children}
-                <Footer />
             </body>
         </html>
     );

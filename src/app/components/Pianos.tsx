@@ -166,7 +166,7 @@ export default function Piano() {
     }
 
     return (
-        <div className="mx-auto my-6 w-full max-w-[448px]">
+        <div className="mx-auto my-6 w-full max-w-md">
             {/* Barre d'options */}
             <div className="mb-2 flex items-center gap-3">
                 <label className="inline-flex items-center gap-2 text-sm text-gray-100">
@@ -202,7 +202,7 @@ export default function Piano() {
                 )}
 
                 {/* touches blanches */}
-                <div className="relative z-[1] flex h-full">
+                <div className="relative z-1 flex h-full">
                     {whiteNotes.map((note) => {
                         const cents = detuneCentsRef.current[note];
                         const title =
