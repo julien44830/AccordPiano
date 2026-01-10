@@ -1,18 +1,22 @@
 // app/layout.tsx
 import SignatureConsole from "../../public/SignatureConsole";
-import "./(site)/globals.css"; // ⚠️ contient @import "tailwindcss";
-import "./(site)/theme.css"; // ton thème sombre
+import "./(site)/globals.css";
+import "./(site)/theme.css";
 import "./components/Piano.css";
 import { Maitree } from "next/font/google";
 
 const maitree = Maitree({ subsets: ["latin"], weight: ["300", "400", "700"] });
 export const metadata = {
     metadataBase: new URL("https://www.accordpianos-panhaleux.fr/"),
+    title: "Accord de piano à Nantes et en Loire-Atlantique – EP Pianos",
+    description:
+        "Accord de piano à Nantes et en Loire-Atlantique, ainsi que dans les régions voisines. Technicienne accordeur diplômée : réglage, harmonisation, expertise et intervention à domicile.",
+
     icons: { icon: [{ url: "/favicon-32x32.png", type: "image/svg+xml" }] },
     openGraph: {
-        title: "EP Pianos – Accord, réglage & harmonisation",
+        title: "Accord de piano à Nantes et en Loire-Atlantique – EP Pianos",
         description:
-            "Technicienne accordeur diplômée. Accord, réglage, harmonisation et expertise de pianos.",
+            "Accord de piano à Nantes et en Loire-Atlantique, ainsi que dans les régions voisines. Technicienne accordeur diplômée : réglage, harmonisation, expertise et intervention à domicile.",
         url: "https://www.accordpianos-panhaleux.fr/",
         siteName: "EP Pianos",
         images: [
