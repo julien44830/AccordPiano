@@ -1,4 +1,5 @@
 // app/layout.tsx
+import SignatureConsole from "../../public/SignatureConsole";
 import "./(site)/globals.css"; // ⚠️ contient @import "tailwindcss";
 import "./(site)/theme.css"; // ton thème sombre
 import "./components/Piano.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
         >
             <body className="bg-brand-dark text-brand-light antialiased">
                 {children}
+                <SignatureConsole />
             </body>
         </html>
     );
