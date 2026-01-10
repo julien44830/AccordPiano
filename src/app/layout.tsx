@@ -1,5 +1,5 @@
 // app/layout.tsx
-import SignatureConsole from "../../public/SignatureConsole";
+import SignatureConsole from "./(site)/SignatureConsole";
 import "./(site)/globals.css";
 import "./(site)/theme.css";
 import "./components/Piano.css";
