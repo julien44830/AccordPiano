@@ -5,8 +5,8 @@ const legalInfo = {
     companyName: "Elisabeth Panhaleux Pianos", // Nom commercial
     legalForm: "entreprise individuelle", // Forme juridique
     siret: "444 328 967 00021",
-    addressLine1: "22 rue de la salmoniere",
-    addressLine2: "44450 saint julien de Concelles",
+    addressLine1: "133 route de la loire",
+    addressLine2: "44450 Divatte sur Loire",
     phone: "+33 (0)6 49 84 15 03",
     email: "pianoselisabeth@gmail.com",
     directorName: "Elisabeth Panhaleux", // Directeur de la publication
